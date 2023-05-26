@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
-import { useFBX, Center,  } from '@react-three/drei'
+import { useFBX, Center, OrbitControls,  } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 import { motion } from "framer-motion-3d"
 
@@ -20,6 +20,8 @@ const Experience = () => {
    })
    
   return <>
+
+  <OrbitControls/>
   
     <pointLight position={[0, 4, 0]}/>
     <ambientLight/>
