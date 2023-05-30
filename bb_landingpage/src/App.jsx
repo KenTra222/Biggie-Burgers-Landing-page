@@ -12,12 +12,12 @@ function App() {
   return (
     <div className='min-w-full h-screen flex items-stretch'>
 
-    <section className='section1 bg-slate-100 w-1/2 h-full flex flex-col items-center justify-evenly bg-cover bg-center'  
-    style={{backgroundImage: "url('https://wallpaperaccess.com/full/3514955.jpg"}}>
+    <section className=' bg-slate-100 w-3/4 h-full flex flex-col items-center justify-evenly bg-cover bg-center bg-no-repeat'  
+    style={{backgroundImage: "url('https://www.macworld.com/wp-content/uploads/2021/03/cio_vr_virtual_reality_headset_by_damir_khabirov_gettyimages-1153003888_2400x1600-100802381-orig-2.jpg?quality=50&strip=all"}}>
       
    
 
-        <h1 className='text-5xl'> Gigibite</h1>
+        <h1 className='text-5xl text-white'> Gigibite</h1>
 
         <div className='opacity-80 px-6 py-2 bg-black w-5/6 h-48 flex flex-col items-center justify-evenly '  >
           <p className='text-white text-base text-center'>20% off on all orders  over $200 and more </p>
@@ -27,8 +27,8 @@ function App() {
 
     </section>
 
-    <section className=' bg-black w-1/2 h-full flex flex-col items-center'>
-    <p className='font-bold text-white mt-10'>Buy, Sell, or Trade your the latest tech!</p>
+    <section className=' bg-white w-1/4 h-full flex flex-col items-center'>
+    <p className='font-bold text-black mt-20 px-4'>Buy, Sell, or Trade your the latest tech! And get a deal on your next purchase</p>
       <Canvas> 
         <Experience/>
       </Canvas>

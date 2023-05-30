@@ -1,27 +1,30 @@
 import React, {useEffect, useRef, useState} from 'react'
-import { useFBX, Center, OrbitControls,  } from '@react-three/drei'
+import { useFBX, Center, OrbitControls, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 import { motion } from "framer-motion-3d"
 
 
-const Experience = () => {
+const Experience = (props) => {
 
-    const burgerRef = useRef()
+    const phoneRef = useRef()
 
+    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/iphone-x/model.gltf')
 
     const headset = useFBX('/models/headset/headset.fbx')
-    const phone = useFBX('/models/phone/Smartphone.fbx')
+    
     
  
 
    useFrame((state)=>{
         const time = state.clock.getElapsedTime()
-        const y = Math.sin(time)
+        const rotationSpeed = 0.65; // Adjust the rotation speed as desired
+    const rotation = (time * rotationSpeed) % (2 * Math.PI); // Calculate the rotation angle
+    phoneRef.current.rotation.y = rotation; // Update the rotation of the phone model
    })
    
   return <>
 
-  <OrbitControls/>
+
   
     <pointLight position={[0, 4, 0]}/>
     <ambientLight/>
@@ -30,11 +33,10 @@ const Experience = () => {
 
          
       
-        <primitive object={phone} scale={0.25}>
-            <meshBasicMaterial color={'hotpink'}/>
-        </primitive>
+    <primitive ref={phoneRef} object={scene} {...props} />
     </Center>
     </>
 }
 
 export default Experience
+
