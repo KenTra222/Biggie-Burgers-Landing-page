@@ -17,11 +17,11 @@ function App() {
       
    
 
-        <h1 className='text-5xl text-white'> Gigibite</h1>
+        <h1 className='text-5xl text-white'> GIGIBITE</h1>
 
-        <div className='opacity-80 px-6 py-2 bg-black w-5/6 h-48 flex flex-col items-center justify-evenly '  >
+        <div className='opacity-80 px-6 py-2 w-5/6 h-48 flex flex-col items-center justify-evenly '  >
           <p className='text-white text-base text-center'>20% off on all orders  over $200 and more </p>
-          <button className='bg-slate-700 text-white w-40 h-12 rounded hover:text-black hover:bg-slate-300'>Show Me The Goods</button>
+          <button className='bg-blue-900 text-white w-40 h-12 rounded hover:text-black hover:bg-slate-300'>Show Me The Goods</button>
         </div>
        
 
